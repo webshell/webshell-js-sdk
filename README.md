@@ -50,7 +50,7 @@ $(document).ready(function() {
 </html>
 `````
 
-Pretty simple hm ?! You can call any other APIs on the platform in the same way. More information : Javascript SDK. The javascript given in the code attribute of wsh.exec() is processed on our server and we retrieve all kind of data for you.
+Pretty simple hm ?! You can call any other APIs on the platform in the same way. The javascript given in the `code` attribute of `wsh.exec()` is processed on our server and we retrieve all kind of data for you.
 
 wsh Object
 ----------
@@ -84,4 +84,4 @@ wsh.exec({
 You can try online your Webshell code in the [API Editor](http://webshell.io/editor) and include your script using fs object inside your webshell code (see [builtins/fs()](http://webshell.io/docs/reference/v/builtins))
 
 
-Read more in the [Webshell documentation](http://webshell.io/docs)
+Read more information about Webshell in the [documentation](http://webshell.io/docs)
