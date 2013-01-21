@@ -1,5 +1,5 @@
 var wsh;
-//Set you public API Key of your Webshell app here
+//Set your public API Key of your Webshell application here
 var webshellPublicKey = "YOUR_KEY";
 
 (function ($) {
