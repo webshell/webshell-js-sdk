@@ -52,4 +52,36 @@ $(document).ready(function() {
 
 Pretty simple hm ?! You can call any other APIs on the platform in the same way. More information : Javascript SDK. The javascript given in the code attribute of wsh.exec() is processed on our server and we retrieve all kind of data for you.
 
+wsh Object
+----------
+
+Once the SDK loaded, you can use the `wsh` object to access the Webshell API.
+
+Currently, only one method is available from the SDK : `wsh.exec(obj)`
+
+`````javascript
+wsh.exec({
+  code: function() {
+    //some code which have be executed by Webshell
+  },
+  args: {
+    //data to escape in `code`
+  },
+  process: function(data, meta) {
+    //this method is executed for each view in the results
+  },
+  success: function(json) {
+    //call after process all view with the final json response
+  },
+  complete: function(json) {
+    //call when all HTML views and javascript are loaded and ready to be used
+  }
+})
+`````
+
+*code* can be a string of the javascript or a function with the javascript which have to be executed by Webshell inside.
+
+You can try online your Webshell code in the [API Editor](http://webshell.io/editor) and include your script using fs object inside your webshell code (see [builtins/fs()](http://webshell.io/docs/reference/v/builtins))
+
+
 Read more in the [Webshell documentation](http://webshell.io/docs)
