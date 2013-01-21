@@ -29,7 +29,7 @@ This is the simplest app using Webshell
     <meta charset="UTF-8">
     <title>Hello World!</title>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-    <script type="text/javascript" src="http://api.webshell.io/sdk/js?key={API_KEY}"></script>
+    <script type="text/javascript" src="/path/to/webshell.js"></script>
     <script type="text/javascript">
 $(document).ready(function() {
   wsh.exec({
