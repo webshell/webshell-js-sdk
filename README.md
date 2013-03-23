@@ -1,24 +1,20 @@
+Webshell
+========
+
+Webshell helps developers to integrate APIs in their apps in a simple way. It's a kind of Cloud Framework. You send us some javascript via HTTP and we send you back some JSON with all APIs you requested.
+
 webshell.js
 ===========
 
-This SDK javascript is the easiest way to use Webshell client side
+This SDK javascript is the easiest way to use the Webshell API client side
 
-I - Create an app on [webshell](http://webshell.io)
+Create an app on [webshell](http://webshell.io)
 ------------------------------
 
-To use Webshell, you have to create an app in your Dashboard which will generate a valid API Key.
+To use Webshell, you have to signup and create an app in your Dashboard which will generate a valid API Key.
 
-II - Setup webshell.js
-----------------------
-
-Clone this repo or Download the latest release, then add this line to the `<head>` of all the pages that require Webshell
-
--- JQuery is required to load webshell.js
-
-You have to set your API Key in webshell.js line 3
-
-III - Hello world app
----------------------
+Hello world app
+---------------
 
 This is the simplest app using Webshell
 
@@ -32,6 +28,10 @@ This is the simplest app using Webshell
     <script type="text/javascript" src="/path/to/webshell.js"></script>
     <script type="text/javascript">
 $(document).ready(function() {
+  //initialize the SDK with your API Key
+  wsh.initialize('YOUR_APIKEY');
+
+  //Execute a request to display a Google Maps
   wsh.exec({
     code: function() {
       var m = apis.google.maps({height: '100%'});
@@ -50,14 +50,23 @@ $(document).ready(function() {
 </html>
 `````
 
-Pretty simple hm ?! You can call any other APIs on the platform in the same way. More information : Javascript SDK. The javascript given in the code attribute of wsh.exec() is processed on our server and we retrieve all kind of data for you.
+Pretty simple hm ?! You can call any other APIs on the platform in the same way. The javascript given in the `code` attribute of wsh.exec() is processed on our server and we retrieve all kind of data for you.
 
 wsh Object
-----------
+==========
 
-Once the SDK loaded, you can use the `wsh` object to access the Webshell API.
+Once the SDK loaded, you can use the `wsh` object.
 
-Currently, only one method is available from the SDK : `wsh.exec(obj)`
+wsh.initialize(apikey)
+----------------------
+
+Before use the Webshell API, be sure you have executed this function to initialize the SDK with your APIKey.
+
+
+wsh.exec(obj)
+-------------
+
+This method make a call to Webshell to execute the javascript given in the `code` function.
 
 `````javascript
 wsh.exec({
@@ -81,7 +90,6 @@ wsh.exec({
 
 *code* can be a string of the javascript or a function with the javascript which have to be executed by Webshell inside.
 
-You can try online your Webshell code in the [API Editor](http://webshell.io/editor) and include your script using fs object inside your webshell code (see [builtins/fs()](http://webshell.io/docs/reference/v/builtins))
-
+You can try online your Webshell code in the [API Editor](http://webshell.io/editor) and include your script using fs object inside your webshell code (see [builtins/fs()](http://webshell.io/docs/builtins/v/fs))
 
 Read more in the [Webshell documentation](http://webshell.io/docs)
