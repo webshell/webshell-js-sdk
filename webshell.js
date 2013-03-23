@@ -1,6 +1,4 @@
 var wsh;
-//Set you public API Key of your Webshell app here
-var webshellPublicKey = "YOUR_KEY";
 
 (function ($) {
     if (window.XDomainRequest) {
@@ -166,9 +164,13 @@ var webshellPublicKey = "YOUR_KEY";
 
 
     function wsClass() {
-        this.wspubkey = webshellPublicKey;
+        this.wspubkey = '';
         this.gpid = 0;
         this.procs = [];
+    }
+
+    wsClass.prototype.initialize = function(apikey) {
+        this.wspubkey = pubkey;
     }
 
     wsClass.prototype.display = function(json, res) {
