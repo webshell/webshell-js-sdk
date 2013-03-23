@@ -1,7 +1,7 @@
 Webshell
 ========
 
-Webshell helps developers to integrate APIs in their apps in a simple way. It's a kind of Cloud Framework. You send us some javascript via HTTP and we send you back some JSON with all APIs you requested.
+Webshell helps developers to integrate APIs in their apps in a simple way. You send us some javascript via HTTP and we send you back some JSON with all APIs responses you've requested.
 
 webshell.js
 ===========
@@ -55,12 +55,12 @@ Pretty simple hm ?! You can call any other APIs on the platform in the same way.
 wsh Object
 ==========
 
-Once the SDK loaded, you can use the `wsh` object.
+Once the SDK loaded, you can use the `wsh` variable in your code.
 
 wsh.initialize(apikey)
 ----------------------
 
-Before use the Webshell API, be sure you have executed this function to initialize the SDK with your APIKey.
+Before to use the Webshell API, be sure you have executed this function to initialize the SDK with your APIKey.
 
 
 wsh.exec(obj)
