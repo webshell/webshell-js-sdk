@@ -170,7 +170,7 @@ var wsh;
     }
 
     wsClass.prototype.initialize = function(apikey) {
-        this.wspubkey = pubkey;
+        this.wspubkey = apikey;
     }
 
     wsClass.prototype.display = function(json, res) {
